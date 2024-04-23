@@ -1,0 +1,39 @@
+{% extends 'material_base.html' %}
+{% block title %}Put{% endblock %}
+{% block header %}Put money from account{% endblock %}
+{% block enable_logo %}{% endblock %}
+{% block enable1 %}active{% endblock %}
+{% block enable2 %}{% endblock %}
+{% block enable3 %}{% endblock %}
+{% block enable4 %}{% endblock %}
+{% block enable5 %}{% endblock %}
+{% block enable6 %}{% endblock %}
+{% block enable7 %}{% endblock %}
+{% block enable8 %}{% endblock %}
+{% block enable9 %}{% endblock %}
+{% block content %}
+
+<form class="outer-container" method="post">
+    {% csrf_token %}
+    <div class="form-container">
+        <div class="container-input">
+            <label for="bank">Bank ID</label>
+            <input id="bank" name="bank_id" type="text" placeholder="1" />
+        </div>
+        <div class="container-input">
+            <label for="account">Account ID</label>
+            <input id="account" name="account_id" type="text" placeholder="1" />
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="container-input">
+            <label for="amount">Amount of money</label>
+            <input id="amount" name="amount" type="text" placeholder="1000" />
+        </div>
+        <button class="container-button" type="submit">
+            Put money
+        </button>
+    </div>
+</form>
+
+{% endblock %}

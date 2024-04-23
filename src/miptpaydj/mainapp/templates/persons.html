@@ -1,0 +1,37 @@
+{% extends 'material_base.html' %}
+{% block title %}Persons{% endblock %}
+{% block header %}Persons{% endblock %}
+{% block enable_logo %}{% endblock %}
+{% block enable1 %}{% endblock %}
+{% block enable2 %}{% endblock %}
+{% block enable3 %}{% endblock %}
+{% block enable4 %}active{% endblock %}
+{% block enable5 %}{% endblock %}
+{% block enable6 %}{% endblock %}
+{% block enable7 %}{% endblock %}
+{% block enable8 %}{% endblock %}
+{% block enable9 %}{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Address</th>
+                <th>Passport</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons %}
+            <tr>
+                <td>{{ person.id }}</td>
+                <td>{{ person.name }}</td>
+                <td>{{ person.surname }}</td>
+                <td>{{ person.address }}</td>
+                <td>{{ person.passport }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

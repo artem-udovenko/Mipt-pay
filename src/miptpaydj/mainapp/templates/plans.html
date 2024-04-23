@@ -1,0 +1,43 @@
+{% extends 'material_base.html' %}
+{% block title %}Plans{% endblock %}
+{% block header %}Plans{% endblock %}
+{% block enable_logo %}{% endblock %}
+{% block enable1 %}{% endblock %}
+{% block enable2 %}{% endblock %}
+{% block enable3 %}{% endblock %}
+{% block enable4 %}{% endblock %}
+{% block enable5 %}{% endblock %}
+{% block enable6 %}active{% endblock %}
+{% block enable7 %}{% endblock %}
+{% block enable8 %}{% endblock %}
+{% block enable9 %}{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Bank</th>
+                <th>Category</th>
+                <th>Commission</th>
+                <th>Period</th>
+                <th>Lower limit</th>
+                <th>Transfer limit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for plan in plans %}
+            <tr>
+                <td>{{ plan.id }}</td>
+                <td>{{ plan.name }}</td>
+                <td>{{ plan.bank.name }}</td>
+                <td>{{ plan.category.name }}</td>
+                <td>{{ plan.commission }} / {{ plan.increased_commission }}</td>
+                <td>{{ plan.period }} / {{ plan.decreased_period }}</td>
+                <td>{{ plan.lower_limit }} / {{ plan.decreased_lower_limit }}</td>
+                <td>{{ plan.transfer_limit }} / {{ plan.decreased_transfer_limit }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

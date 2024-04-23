@@ -1,0 +1,49 @@
+{% extends 'material_base.html' %}
+{% block title %}Transfer{% endblock %}
+{% block header %}Transfer money between accounts{% endblock %}
+{% block enable_logo %}{% endblock %}
+{% block enable1 %}{% endblock %}
+{% block enable2 %}{% endblock %}
+{% block enable3 %}active{% endblock %}
+{% block enable4 %}{% endblock %}
+{% block enable5 %}{% endblock %}
+{% block enable6 %}{% endblock %}
+{% block enable7 %}{% endblock %}
+{% block enable8 %}{% endblock %}
+{% block enable9 %}{% endblock %}
+{% block content %}
+
+<form class="outer-container" method="post">
+    {% csrf_token %}
+    <div class="form-container">
+        <div class="container-input">
+            <label for="departure_bank">Departure bank ID</label>
+            <input id="departure_bank" name="departure_bank" type="text" placeholder="1" />
+        </div>
+        <div class="container-input">
+            <label for="departure_account">Departure account ID</label>
+            <input id="departure_account" name="departure_account" type="text" placeholder="1" />
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="container-input">
+            <label for="destination_bank">Destination bank ID</label>
+            <input id="destination_bank" name="destination_bank" type="text" placeholder="2" />
+        </div>
+        <div class="container-input">
+            <label for="destination_account">Destination account ID</label>
+            <input id="destination_account" name="destination_account" type="text" placeholder="2" />
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="container-input">
+            <label for="amount">Amount of money</label>
+            <input id="amount" name="amount" type="text" placeholder="1000" />
+        </div>
+        <button class="container-button" type="submit">
+            Transfer money
+        </button>
+    </div>
+</form>
+
+{% endblock %}

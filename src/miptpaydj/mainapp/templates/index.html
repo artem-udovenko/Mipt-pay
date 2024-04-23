@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Main</title>
+</head>
+<body>
+    <div class= 'container'>
+<div class="container_content">
+<div class="container_content_inner">
+<div class="title">
+  <h1>MIPTPAY</h1>
+</div>
+<div class="par">
+<p>
+Вас приветсвует приложение MIPTPAY, чтобы продолжить зарегистрируйтесь или войдите в аккаунт
+</p>
+</div>
+<div class="btns">
+<button class='btn btns_more' onclick="location.href = '/accounts/login?next=/home/'"> Log in </button>
+</div>
+    <div class="btns">
+<button class='btn btns_more' onclick="location.href = '/register'"> Sign up </button>
+</div>
+</div>
+</div>
+ <div class="container_outer_img">
+ <div class="img-inner">
+ <img src='https://images.unsplash.com/photo-1517911041065-4960862d38f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80'  alt="" class="container_img"/>
+       </div>
+     </div>
+  </div>
+<div class="overlay"></div>
+</body>
+</html>

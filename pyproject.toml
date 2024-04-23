@@ -1,0 +1,40 @@
+[build-system]
+requires = ["poetry-core", "-r requirements.txt"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+readme = "README.md"
+authors = ["Barilov Denis <barilov.di@phystech.edu>",
+           "Kalinin Mikhail <kalinin.mi@phystech.edu>",
+           "Udovenko Artem <udovenko.ai@phystech.edu>"]
+name = "miptpay"
+version = "2.0"
+description = "Bank system emulation"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "5.0.4"
+toml = "0.10.2"
+dateutils = "0.6.12"
+datetime = "5.1"
+
+[project.urls]
+home = "http://127.0.0.1:8000/home/"
+login = "http://127.0.0.1:8000/accounts/login"
+register = "http://127.0.0.1:8000/register"
+banks = "http://127.0.0.1:8000/banks"
+plans = "http://127.0.0.1:8000/plans"
+persons = "http://127.0.0.1:8000/persons"
+clients = "http://127.0.0.1:8000/clients"
+account = "http://127.0.0.1:8000/account"
+transactions = "http://127.0.0.1:8000/transactions"
+admin = "http://127.0.0.1:8000/admin"
+
+[constant]
+# DAY for days, HOUR for hours, MINUTE for minutes, SECOND for seconds
+time = "HOUR"
+
+[tool.poetry.scripts]
+setup = "miptpay.tests.sampledata:main"

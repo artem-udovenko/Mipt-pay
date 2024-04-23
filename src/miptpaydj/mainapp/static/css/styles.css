@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+body {
+    /*font-family: 'Montserrat', sans-serif;*/
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;
+}
+
+header {
+    background-color: #3d14dd; /* изменение цвета шапки */
+    color: #000000;
+    padding: 10px 150px; /* изменение отступов слева и справа */
+    font-weight: lighter;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #f8f9fa;
+}
+
+main {
+    padding: 20px;
+    margin-top: 20px;
+    padding-left: 150px; /* изменение отступа слева */
+    padding-right: 150px; /* изменение отступа справа */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    /*padding-right: 100px;*/
+}
+
+table th, table td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #3d14dd; /* изменение цвета заголовков таблицы */
+    color: #ffffff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f0f2f5;
+}
+
+table tr:hover {
+    background-color: #d6e9ff;
+}
+
+.table {
+    margin-left: 103px;
+    padding-right: 100px;
+}

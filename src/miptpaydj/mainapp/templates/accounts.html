@@ -1,0 +1,43 @@
+{% extends 'material_base.html' %}
+{% block title %}Accounts{% endblock %}
+{% block header %}Accounts{% endblock %}
+{% block enable_logo %}{% endblock %}
+{% block enable1 %}{% endblock %}
+{% block enable2 %}{% endblock %}
+{% block enable3 %}{% endblock %}
+{% block enable4 %}{% endblock %}
+{% block enable5 %}{% endblock %}
+{% block enable6 %}{% endblock %}
+{% block enable7 %}{% endblock %}
+{% block enable8 %}active{% endblock %}
+{% block enable9 %}{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Bank</th>
+                <th>Owner</th>
+                <th>Opened</th>
+                <th>Money</th>
+                <th>Transfer</th>
+                <th>Plan</th>
+                <th>Freeze Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for account in accounts %}
+            <tr>
+                <td>{{ account.id }}</td>
+                <td>{{ account.bank.name }}</td>
+                <td>{{ account.owner.name }} {{ account.owner.curname }}</td>
+                <td>{{ account.opened }}</td>
+                <td>{{ account.money }}</td>
+                <td>{{ account.transfer }}</td>
+                <td>{{ account.plan.name }}</td>
+                <td>{{ account.freeze_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

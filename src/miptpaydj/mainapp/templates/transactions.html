@@ -1,0 +1,37 @@
+{% extends 'material_base.html' %}
+{% block title %}Transactions{% endblock %}
+{% block header %}Transactions{% endblock %}
+{% block enable_logo %}{% endblock %}
+{% block enable1 %}{% endblock %}
+{% block enable2 %}{% endblock %}
+{% block enable3 %}{% endblock %}
+{% block enable4 %}{% endblock %}
+{% block enable5 %}{% endblock %}
+{% block enable6 %}{% endblock %}
+{% block enable7 %}{% endblock %}
+{% block enable8 %}{% endblock %}
+{% block enable9 %}active{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sender Account</th>
+                <th>Receiver Account</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.id }}</td>
+                <td>{{ transaction.departure }}</td>
+                <td>{{ transaction.destination }}</td>
+                <td>{{ transaction.amount }}</td>
+                <!-- Add other necessary data cells here -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
